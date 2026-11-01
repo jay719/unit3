@@ -172,7 +172,21 @@ def main():
 
     print("\n=== EDGE CASES ===")
     print("TODO: Demonstrate at least two edge cases.")
+    # Try deleting an index that doesn't exist
+    print(f"Deleting invalid index 10: {delete_at(numbers, 10)}")
+    print(f"List after invalid deletion: {numbers}")
 
+    # Insert a value into an empty list
+    empty_list = []
+    print(f"\nOriginal empty list: {empty_list}")
+
+    insert_at(empty_list, 0, 100)
+    print(f"After inserting 100 into empty list: {empty_list}")
+
+    # Try deleting an item from an empty list
+    another_empty_list = []
+    print(f"\nDeleting from an empty list: {delete_at(another_empty_list, 0)}")
+    print(f"List after deletion attempt: {another_empty_list}")
 
 
 if __name__ == "__main__":
