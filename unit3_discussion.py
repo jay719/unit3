@@ -87,7 +87,22 @@ def main():
     #    - the end
     # 4. Display the list after each insertion.
     # 5. Use comments to explain each step in the implementation.
+    print("\n=== INSERTION TESTS ===")
+    print("TODO: Create a list and demonstrate insertions.")
+    numbers = [10, 20, 30, 40]
+    print(f"Original list: {numbers}")
 
+    # Insert 5 at the beginning
+    insert_at(numbers, 0, 5)
+    print(f"After inserting 5 at the beginning: {numbers}")
+
+    # Insert 25 in the middle
+    insert_at(numbers, 3, 25)
+    print(f"After inserting 25 in the middle: {numbers}")
+
+    # Insert 50 at the end
+    insert_at(numbers, len(numbers), 50)
+    print(f"After inserting 50 at the end: {numbers}")
     # ===============================
     # TODO (Student): DELETION TESTS
     # ===============================
@@ -103,7 +118,23 @@ def main():
 
     print("\n=== DELETION TESTS ===")
     print("TODO: Demonstrate deletions from multiple positions.")
+    # Use the updated list from the insertion tests
+    print(f"Current list: {numbers}")
 
+    # Remove the first value
+    removed = delete_at(numbers, 0)
+    print(f"Removed from beginning: {removed}")
+    print(f"Updated list: {numbers}")
+
+    # Remove a value from the middle
+    removed = delete_at(numbers, 2)
+    print(f"Removed from middle: {removed}")
+    print(f"Updated list: {numbers}")
+
+    # Remove the last value
+    removed = delete_at(numbers, len(numbers) - 1)
+    print(f"Removed from end: {removed}")
+    print(f"Updated list: {numbers}")
     # ===============================
     # TODO (Student): SEARCH TESTS
     # ===============================
@@ -116,6 +147,15 @@ def main():
 
     print("\n=== SEARCH TESTS ===")
     print("TODO: Demonstrate searching for values.")
+    print(f"Current list: {numbers}")
+
+    # Search for a value that exists in the list
+    result = search_value(numbers, 30)
+    print(f"Searching for 30: Found at index {result}")
+
+    # Search for a value that isn't in the list
+    result = search_value(numbers, 100)
+    print(f"Searching for 100: Index {result} (not found)")
 
     # ===============================
     # TODO (Student): EDGE CASES
