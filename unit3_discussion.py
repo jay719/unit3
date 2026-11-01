@@ -1,3 +1,4 @@
+
 """
 ==================================================
 Unit 3 DISCUSSION: List Operations (Insert, Delete, Search)
@@ -27,7 +28,6 @@ def insert_at(lst, index, value):
 
     # Inserting at the beginning or middle takes more work because values shift
     # Adding to the end is usually faster since no existing values need to shift
-
 
 
 def delete_at(lst, index):
@@ -87,8 +87,10 @@ def main():
     #    - the end
     # 4. Display the list after each insertion.
     # 5. Use comments to explain each step in the implementation.
+
     print("\n=== INSERTION TESTS ===")
     print("TODO: Create a list and demonstrate insertions.")
+
     numbers = [10, 20, 30, 40]
     print(f"Original list: {numbers}")
 
@@ -103,6 +105,7 @@ def main():
     # Insert 50 at the end
     insert_at(numbers, len(numbers), 50)
     print(f"After inserting 50 at the end: {numbers}")
+
     # ===============================
     # TODO (Student): DELETION TESTS
     # ===============================
@@ -118,6 +121,7 @@ def main():
 
     print("\n=== DELETION TESTS ===")
     print("TODO: Demonstrate deletions from multiple positions.")
+
     # Use the updated list from the insertion tests
     print(f"Current list: {numbers}")
 
@@ -135,6 +139,7 @@ def main():
     removed = delete_at(numbers, len(numbers) - 1)
     print(f"Removed from end: {removed}")
     print(f"Updated list: {numbers}")
+
     # ===============================
     # TODO (Student): SEARCH TESTS
     # ===============================
@@ -147,6 +152,7 @@ def main():
 
     print("\n=== SEARCH TESTS ===")
     print("TODO: Demonstrate searching for values.")
+
     print(f"Current list: {numbers}")
 
     # Search for a value that exists in the list
@@ -172,11 +178,14 @@ def main():
 
     print("\n=== EDGE CASES ===")
     print("TODO: Demonstrate at least two edge cases.")
-    # Try deleting an index that doesn't exist
+
+    # Try deleting an index outside the list
+    # This should return None and leave the original list unchanged
     print(f"Deleting invalid index 10: {delete_at(numbers, 10)}")
     print(f"List after invalid deletion: {numbers}")
 
     # Insert a value into an empty list
+    # The new value should become the first item at index 0
     empty_list = []
     print(f"\nOriginal empty list: {empty_list}")
 
@@ -184,9 +193,32 @@ def main():
     print(f"After inserting 100 into empty list: {empty_list}")
 
     # Try deleting an item from an empty list
+    # Since there are no values, the function should return None instead of an error
     another_empty_list = []
     print(f"\nDeleting from an empty list: {delete_at(another_empty_list, 0)}")
     print(f"List after deletion attempt: {another_empty_list}")
+
+    # ===============================
+    # REAL-WORLD EXAMPLE: GAME INVENTORY
+    # ===============================
+
+    print("\n=== GAME INVENTORY EXAMPLE ===")
+
+    inventory = ["Sword", "Shield", "Potion"]
+    print(f"Starting inventory: {inventory}")
+
+    # Add a new item to a specific inventory slot
+    insert_at(inventory, 1, "Bow")
+    print(f"Inventory after adding Bow: {inventory}")
+
+    # Find where an item is stored in the inventory
+    item_index = search_value(inventory, "Potion")
+    print(f"Potion found at index: {item_index}")
+
+    # Remove an item after it has been used
+    removed_item = delete_at(inventory, item_index)
+    print(f"Used item: {removed_item}")
+    print(f"Updated inventory: {inventory}")
 
 
 if __name__ == "__main__":
