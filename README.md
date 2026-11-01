@@ -11,7 +11,7 @@ This assignment examines insertion, deletion, and searching in Python lists.
 - Search for values in a list
 - Analyze list behavior and performance
 
-## Requirements
+## Requirement
 
 1. Test insertion at the beginning, middle, and end.
 2. Test deletion at the beginning, middle, and end.
