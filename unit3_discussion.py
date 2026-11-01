@@ -88,9 +88,6 @@ def main():
     # 4. Display the list after each insertion.
     # 5. Use comments to explain each step in the implementation.
 
-    print("\n=== INSERTION TESTS ===")
-    print("TODO: Create a list and demonstrate insertions.")
-
     # ===============================
     # TODO (Student): DELETION TESTS
     # ===============================
